@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environments
+.env/
+.venv/
+
+# Conda
+conda-meta/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & outputs
+data/
+outputs/
+
+# Models
+*.pt
+*.pth
+
+# OS
+.DS_Store
+Thumbs.db
