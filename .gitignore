@@ -1,6 +1,9 @@
+.gitignore
+
 # Python
 __pycache__/
 *.pyc
+PyClassesRat.ipynb
 
 # Environments
 .env/
