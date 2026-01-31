@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # Generating the data
 weight, bias = 0.5, 1
 
-start, stop, step = -1, 1, 0.05
+start, stop, step = -4, 1, 0.05
 X = torch.arange(start, stop, step).unsqueeze(dim=1)
 Y = weight * (X*X) + bias
 
@@ -34,6 +34,7 @@ def plot_predictions(train_data=X_train,
         plt.scatter(test_data, predictions, c="r", s=4, label="Predictions")
     
     plt.legend(prop={"size":14})
+    plt.show()
 
 print("Prediction graph")    
 plot_predictions()
@@ -69,7 +70,7 @@ optimizer = torch.optim.SGD(params=model_quad.parameters(),
                             lr=0.001)
 
 
-epochs = 3000 # Number of loops through the data (hyperparameter)
+epochs = 10000 # Number of loops through the data (hyperparameter)
 epoch_list, train_loss, test_loss_val = [], [], []
 
 # 0.
@@ -106,3 +107,13 @@ for epoch in range(epochs):
         epoch_list.append(epoch)
         train_loss.append(loss)
         test_loss_val.append(test_loss)
+
+print(model_quad.state_dict())
+
+# Making predictions with our test data
+with torch.inference_mode():
+    y_preds_new = model_quad(X_test)
+
+print("New predictions as given below:")
+plot_predictions(predictions=y_preds_new)
+
