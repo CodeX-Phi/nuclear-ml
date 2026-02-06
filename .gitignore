@@ -4,6 +4,7 @@
 __pycache__/
 *.pyc
 PyClassesRat.ipynb
+helper_functions.py
 
 # Environments
 .env/
