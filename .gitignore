@@ -4,11 +4,13 @@
 __pycache__/
 *.pyc
 PyClassesRat.ipynb
+rat.ipynb
 helper_functions.py
 
 # Environments
 .env/
 .venv/
+.code-workspace/
 
 # Conda
 conda-meta/
@@ -19,6 +21,7 @@ conda-meta/
 # Data & outputs
 data/
 outputs/
+*.png
 
 # Models
 *.pt
@@ -27,3 +30,10 @@ outputs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Theory
+theory/
+
+# GEF code
+code/
+gef/
